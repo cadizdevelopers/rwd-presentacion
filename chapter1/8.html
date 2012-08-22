@@ -1,0 +1,22 @@
+<div class="row-fluid" style="background-image: url(./img/dawn_of_tux.jpg); background-size: 100%; background-repeat:no-repeat;">
+	<div class="page-header">
+		<h1>Los fondos también son bien recibidos.</h1>
+	</div>
+	<p>CSS3 nos echa una mano en nuestro esfuerzo por ser flexibles.</p>
+	<p>background-size nos puede echar una mano para trabajar con fondos.</p>
+	<pre class="prettyprint linenums" style="margin-left: 10%; margin-right: 10%">
+img{
+	background-image: url(./img/dawn_of_tux.jpg); 
+	background-size: 100%;
+	background-repeat:no-repeat;
+}</pre>
+	<p>Cuidado. No todos los navegadores soportan background-size.</p>
+	<p>IE9+, Firefox 4+, Opera, Chrome, y Safari 5+ soportan esta propiedad.</p>
+	<p>Para versiones anteriores de IE hay una solución algo dura pero efectiva:</p>
+	<pre class="prettyprint linenums" style="margin-left: 10%; margin-right: 10%">
+.logo {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/path/to/logo.png", sizingMethod="scale");
+}</pre>
+	<p>También existen soluciones implementadas en js.</p>
+</div>

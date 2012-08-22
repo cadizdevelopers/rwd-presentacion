@@ -1,0 +1,50 @@
+<div class="row-fluid">
+	<div class="page-header">
+		<h1>Cómo usar una media query</h1>
+	</div>
+	<p>Una media query es una condición para la inclusión o no de una regla css.</p>
+	<p>Puedes incluir una media query directamente en el head.</p>
+	<pre class="prettyprint linenums">
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 100%;
+	}
+}
+</pre>
+	<p>Mediante una etiqueta link.</p>
+	<pre class="prettyprint linenums">
+link rel="stylesheet" href="wide.css" media="screen and (min-width: 1024px)"</pre>
+	<p>O mediante una sentencia de import</p>
+<pre class="prettyprint linenums">
+@import url("wide.css") screen and (min-width: 1024px);</pre>
+	<p>La lista de parámetros que podemos introducir en las media query son los siguientes:</p>
+	<dl>
+		<dt>width</dt>
+		<dd>Ancho del display.</dd>
+		<dt>height</dt>
+		<dd>Alto del display.</dd>
+		<dt>device-width</dt>
+		<dd>Ancho del área de renderizado del dispositivo.</dd>
+		<dt>device-height</dt>
+		<dd>Alto del área de renderizado del dispositivo.</dd>
+		<dt>orientation</dt>
+		<dd>portrait o landscape</dd>
+		<dt>aspect-ratio</dt>
+		<dd>Relación de aspecto de la ventana del navegador (p.ej.)</dd>
+		<dt>device-aspect-ratio</dt>
+		<dd>Relación de aspecto del dispositivo.</dd>
+		<dt>color</dt>
+		<dd>Número de bits de color de un dispositivo. Un dispositivo de 8 bits devolvería 8, uno sin color 0.</dd>
+		<dt>color-index</dt>
+		<dd>Número de entradas de color en la tabla de lookup del dispositivo de salida. Por ejemplo @media screen and (min-color-index: 256)</dd>
+		<dt>monochrome</dt>
+		<dd>Nos permite saber el nº bits por pixel en un dispositivo monocromo.</dd>
+		<dt>resolution</dt>
+		<dd>Densidad de píxeles en el dispositivo: screen and (resolution: 72dpi) or screen and (max-resolution: 300dpi).</dd>
+		<dt>scan</dt>
+		<dd>En televisiones nos permite saber si el procesado es progressive o scan</dd>
+		<dt>grid</dt>
+		<dd>Comprueba si el dispositivo tiene un display basado en grid. Como los teléfonos con un único tamaño de fuente.</dd>
+	</dl>
+
+</div>

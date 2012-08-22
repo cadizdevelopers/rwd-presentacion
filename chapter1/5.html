@@ -1,0 +1,46 @@
+<div class="row-fluid">
+	<div class="page-header">
+		<h1>Cómo construir un grid flexible</h1>
+	</div>
+	<p>Cambio de mentalidad. Pasamos del pixel al %.</p>
+	<p>Imprescindible maquetar con divs. Recordar que cada div es relativo a su padre.</p>
+	<p>El retorno de una vieja conocida, las reglas de 3. Objetivo % contexto = resultado</p>
+	<p>Cojamos de ejemplo un blog sencillo. Página con dos columnas. Nuestra css sería algo parecido a esto:</p>
+	<pre class="prettyprint linenums">
+#page {
+	margin: 36px auto;
+	width: 960px;
+}
+.blog {
+	margin: 0 auto 53px;
+	width: 900px;
+}
+.blog .main {
+	float: left;
+	width: 566px;
+}
+.blog .other {
+	float: right;
+	width: 331px;
+}
+	</pre>
+	<p>Con un poco de magia, paciencia y matemáticas nuestro objetivo es este:</p>
+	<pre class="prettyprint linenums">
+#page {
+	margin: 36px auto;
+	width: 90%;
+}
+.blog {
+	margin: 0 auto 53px;
+	width: 93.75%; /* 900px / 960px */
+}
+.blog .main {
+	float: left;
+	width: 62.8888889%; /* 566px / 900px */
+}
+.blog .other {
+	float: right;
+	width: 36.7777778%; /* 331px / 900px */
+}
+	</pre>
+</div>

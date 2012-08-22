@@ -1,0 +1,22 @@
+<div class="row-fluid">
+	<div class="page-header">
+		<h1>Aprender a usar el overflow.</h1>
+	</div>
+	<p>Hay ocasiones en las que max-width: 100% puede no ser la solución a nuestros males.</p>
+	<p>En estos casos basta con cambiar esto.</p>
+	<pre class="prettyprint linenums">
+.feature img {
+	max-width: 100%;
+}</pre>
+	<p>Por esto otro.</p>
+	<pre class="prettyprint linenums">
+.feature {
+	overflow: hidden;
+}
+.feature img {
+	display: block;
+	max-width: auto;
+}</pre>
+	<p>En casos como este ya estamos caminando por las procelosas aguas del diseño gráfico.</p>
+	<p>Hay que elegir siempre la mejor solución.</p>
+</div>
